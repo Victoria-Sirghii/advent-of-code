@@ -40,8 +40,6 @@ function getItemsSum1(input) {
   return totalPoints;
 }
 
-console.log(getItemsSum1(inputArray));
-
 function getItemsSum2(input) {
   const arrayOfArrays = [];
 
@@ -63,4 +61,5 @@ function getItemsSum2(input) {
   return totalPoints;
 }
 
-getItemsSum2(inputArray);
+console.log(getItemsSum1(inputArray));
+console.log(getItemsSum2(inputArray));

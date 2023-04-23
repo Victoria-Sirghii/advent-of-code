@@ -35,11 +35,13 @@ function getArraysOfNumbers(pair) {
 
 function getSum1(firstPair, secondPair, sum) {
   const isContained = firstPair.every((item) => secondPair.includes(item));
+
   return isContained ? sum + 1 : sum;
 }
 
 function getSum2(firstPair, secondPair, sum) {
   const isContained = firstPair.some((item) => secondPair.includes(item));
+
   return isContained ? sum + 1 : sum;
 }
 

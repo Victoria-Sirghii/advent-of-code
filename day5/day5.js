@@ -25,6 +25,7 @@ schemaArrays.map((stack) => stack.reverse());
 
 const schemaMoves = moves.split("\n").map((line) => {
   const move = line.split(" ");
+
   return {
     amount: parseInt(move[1], 10),
     from: parseInt(move[3], 10) - 1,
@@ -33,7 +34,7 @@ const schemaMoves = moves.split("\n").map((line) => {
 });
 
 function getEnds1(schemaArrays) {
-  const newSchema = schemaArrays
+  const newSchema = schemaArrays;
 
   schemaMoves.map(({ amount, from, to }) => {
     for (let i = 0; i < amount; i++) {
@@ -47,15 +48,14 @@ function getEnds1(schemaArrays) {
 
 function getEnds2(schemaArrays) {
   let newSchema = schemaArrays;
-  
+
   schemaMoves.map(({ amount, from, to }) => {
     let cratesStack = newSchema[from].splice(-amount, amount);
     newSchema[to].push(...cratesStack);
   });
 
   return newSchema.map((stack) => stack[stack.length - 1]).join("");
-};
-
+}
 
 console.log("first", getEnds1([...schemaArrays]));
 console.log("second", getEnds2([...schemaArrays]));

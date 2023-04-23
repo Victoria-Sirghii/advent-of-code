@@ -56,6 +56,7 @@ function getTotalScore2(input) {
       totalScore += points[losingMove[1]];
     }
   }
+
   return totalScore;
 }
 

@@ -9,13 +9,16 @@ function getResult(marker) {
     letters = input.slice(i, i + marker);
     const hasSameLetters = letters
       .split("")
-      .some((letter, letterIndex) => letters.lastIndexOf(letter) !== letterIndex);
+      .some(
+        (letter, letterIndex) => letters.lastIndexOf(letter) !== letterIndex
+      );
 
     if (!hasSameLetters) {
       index = i + marker;
       break;
     }
   }
+
   return index;
 }
 

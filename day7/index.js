@@ -36,7 +36,7 @@ while (input[i]) {
   i++;
 }
 
-console.log(treeData)
+console.log(treeData);
 
 const getFoldersSizes = () => {
   const folderSizes = {};
@@ -61,8 +61,6 @@ const getFoldersSizes = () => {
 
   return folderSizes;
 };
-
-console.log(getFoldersSizes());
 
 function getSumOfFolders() {
   const folderSizes = getFoldersSizes();
