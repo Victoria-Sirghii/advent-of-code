@@ -84,3 +84,6 @@ function getHighestScore(input) {
 
   return highestScore;
 }
+
+console.log(getAllVisibleTrees(input));
+console.log(getHighestScore(input));
