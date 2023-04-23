@@ -55,7 +55,7 @@ function getAllVisibleTrees(input) {
   return sum;
 }
 
-function getHighestTree(input) {
+function getHighestScore(input) {
   let highestScore = 0;
 
   for (let i = 0; i < input.length; i++) {
@@ -63,17 +63,17 @@ function getHighestTree(input) {
       const actualTree = input[i][j];
       const treesLines = getTreeLines(input, i, j);
 
-      const score = treesLines.reduce((a, treesLine) => {
+      const score = treesLines.reduce((totalScore, treesLine) => {
         let counter = 0;
 
         for (let tree of treesLine) {
           counter++;
           if (tree >= actualTree) {
-            return a * counter;
+            return totalScore * counter;
           }
         }
 
-        return a * counter;
+        return totalScore * counter;
       }, 1);
 
       if (score > highestScore) {
